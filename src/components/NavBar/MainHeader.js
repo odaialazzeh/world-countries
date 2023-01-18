@@ -11,7 +11,7 @@ const MainHeader = ({ title }) => (
     <nav className={classes.nav}>
       {title === 'Country Info' ? (
         <div>
-          <Link to="/">
+          <Link to="/world-countries">
             <img src={leftArrow} alt="left-arrow" />
           </Link>
         </div>
