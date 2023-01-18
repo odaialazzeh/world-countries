@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,500&display=swap");
+
+body {
+  background-color: #35548b;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  color: white;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.listContainer {
+  display: grid;
+  grid-template-columns: 100%;
+  place-content: center;
+}
+
+.country ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  width: 20em;
+  height: 4em;
+  background-color: #4e86e6;
+  border-radius: 0.3em;
+  padding-right: 1em;
+  box-shadow: 2px 2px 5px #8baae0;
+  margin: 0.5em auto;
+}
+
+.country a {
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  margin-bottom: 0.5em;
+  margin-left: -1em;
+}
+
+.country p {
+  font-size: 0.7em;
+  color: yellow;
+  margin: 0;
+  text-align: right;
+}
+
+.country span {
+  margin-left: 10em;
+  color: white;
+  font-size: small;
+}
+
+.input {
+  text-align: center;
+}
+
+.sub-container {
+  margin-right: 1em;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 0 10em;
+}
+
+.map g {
+  cursor: pointer;
+}
+
+.search {
+  padding: 1em;
+  font-family: "Poppins", sans-serif;
+  width: 20em;
+  border-radius: 0.5em;
+  border: none;
+}
+
+.jvectormap-zoomin,
+.jvectormap-zoomout {
+  background-color: gainsboro;
+  color: black;
+  font-weight: 600;
+  font-size: 1.1em;
+  padding: 0.25em;
+}
+
+.detailsTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1em;
+}
+
+.detailsTop img {
+  margin-right: 1em;
+  width: 10em;
+  height: 5em;
+}
+
+.region {
+  text-align: center;
+}
+
+.detailsBottom {
+  list-style: none;
+  width: 25em;
+}
+
+.detailsBottom li {
+  margin-bottom: 0.5em;
+}
+
+#title {
+  font-size: 1.4em;
+  font-weight: 500;
+  margin-right: 0.3em;
+}
+
+.country-map {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 10em;
+  height: 4em;
+  background-color: #4e86e6;
+  border-radius: 0.3em;
+  box-shadow: 2px 2px 5px #8baae0;
+  margin: 0.5em auto;
+  text-align: center;
+}
+
+.country-map a {
+  text-decoration: none;
+  color: white;
+}
+
+.detailsBottom li a {
+  text-decoration: none;
+  color: white;
+}
+
+.detailsBottom li a:hover {
+  color: rgb(250, 54, 120);
+}
+
+@media only screen and (min-width: 768px) {
+  .listContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .country ul {
+    margin-right: 1em;
+  }
+
+  .detailsTop {
+    width: 70%;
+  }
+}
