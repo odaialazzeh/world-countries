@@ -18,7 +18,7 @@ function App() {
       <main>
         <Routes>
           <Route index path="/world-countries" element={<HomePage countries={state} />} />
-          <Route index path="/world-countries/:countryName" element={<DetailsPage />} />
+          <Route path="/world-countries/:countryName" element={<DetailsPage />} />
         </Routes>
       </main>
     </>

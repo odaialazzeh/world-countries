@@ -18,9 +18,11 @@
   - [Prerequisites](#prerequisites)
   - [Install](#install)
 - [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
@@ -106,6 +108,16 @@ Install this project with:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- Add search country by voice
+- Allow user to add new data to API
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 <!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
@@ -138,6 +150,22 @@ A list of resources that i find helpful and would like to give credit to :
 - [Stackoverflow ](https://stackoverflow.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FAQ (optional) -->
+
+## ❓ FAQ <a name="faq"></a>
+
+
+- **How to open the World Countries details?**
+
+  - *You can click/tap on the country name or card it will navigate to details report page.*
+
+- **How to return to the home page?**
+
+  - *You can click the left arrow located in the top-left corner of the page.*
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- LICENSE -->
 
