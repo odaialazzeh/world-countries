@@ -2,7 +2,7 @@
   "name": "world-countries",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://gitname.github.io/world-countries",
+  "homepage": ".",
   "dependencies": {
     "@emotion/styled": "^11.10.5",
     "@reduxjs/toolkit": "^1.9.1",

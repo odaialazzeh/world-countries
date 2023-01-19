@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const MapList = ({ name }) => (
   <div className="country-map">
-    <a href={`/world-countries/${name}`}>{name}</a>
+    <a href={name}>{name}</a>
   </div>
 );
 

@@ -5,7 +5,7 @@ const CountriesList = ({ name, latlng }) => (
   <div className="country">
     <ul>
       <li>
-        <a href={`/world-countries/${name}`}>{name}</a>
+        <a href={name}>{name}</a>
       </li>
       <li>
         <span>latlng:</span>
