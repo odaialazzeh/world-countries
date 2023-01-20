@@ -30,7 +30,7 @@
 # 📖  World Countries <a name="about-project"></a>
 
 
-**World Countries** is a web application that fetches real live data from REST COUNTRIES API and provides information about countries.The application will display the world map and a list of countries and will show the name and the Latitude and Longitude of the country and also will allow users to select a country and get information about the specific country.
+**World Countries** is a web application that fetches real live data from REST COUNTRIES API and provides information about countries.The application will display a list of countries and will show the name and the Numeric Code of the country and also will allow users to select a country and get information about the specific country.
 
 ## 🛠 Built With <a name="built-with"></a>
 
