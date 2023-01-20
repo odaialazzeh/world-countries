@@ -1,19 +1,51 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Countries from '../components/countries/countries';
-import MainHeader from '../components/NavBar/MainHeader';
-import Map from '../components/map/map';
+import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import HomeHeader from '../components/NavBar/HomeHeader';
+import { getCountries } from '../redux/countries';
+import CountryList from '../components/countries/CountriesList';
 
-const HomePage = ({ countries }) => (
-  <>
-    <MainHeader title="World Countries" />
-    <Map />
-    <Countries countries={countries} />
-  </>
-);
+const CountriesHome = () => {
+  const dispatch = useDispatch();
+  const countries = useSelector((state) => state.countriesData.countries);
 
-HomePage.propTypes = {
-  countries: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  const [searchCountry, setSearchCountry] = useState(' ');
+
+  useEffect(() => {
+    if (countries.length === 0) {
+      dispatch(getCountries());
+    }
+  }, [dispatch, countries.length]);
+
+  const filteredCountries = countries.filter((country) => (
+    country.name.toLowerCase().includes(searchCountry.toLowerCase())
+    || country.region.toLowerCase().includes(searchCountry.toLowerCase())));
+  if (!Array.isArray(countries)) {
+    return <div>Loading...</div>;
+  }
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    setSearchCountry(e.target.value);
+  };
+
+  return (
+    <div>
+      <HomeHeader />
+      <div className="container">
+        <div className="search-box">
+          <input
+            type="text"
+            placeholder="Search Country"
+            name="searchCountry"
+            onChange={handleSearch}
+          />
+        </div>
+
+        <CountryList countries={searchCountry.length ? filteredCountries : countries} />
+
+      </div>
+    </div>
+  );
 };
 
-export default HomePage;
+export default CountriesHome;

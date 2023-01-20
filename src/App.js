@@ -1,28 +1,16 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Route, Routes } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import DetailsPage from './pages/DetailsPage';
-import getCountriesFromApi from './redux/countries-action';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import CountriesHome from './pages/HomePage';
+import CountryDetails from './pages/DetailsPage';
 
-function App() {
-  const dispatch = useDispatch();
-  const state = useSelector((state) => state.country.countries);
-
-  useEffect(() => {
-    dispatch(getCountriesFromApi());
-  }, [dispatch]);
-
-  return (
-    <>
-      <main>
-        <Routes>
-          <Route index path="/" element={<HomePage countries={state} />} />
-          <Route path="/:countryName" element={<DetailsPage />} />
-        </Routes>
-      </main>
-    </>
-  );
-}
-
+const App = () => (
+  <BrowserRouter>
+    <div>
+      <Routes>
+        <Route path="/" element={<CountriesHome />} />
+        <Route path="/:id" element={<CountryDetails />} />
+      </Routes>
+    </div>
+  </BrowserRouter>
+);
 export default App;

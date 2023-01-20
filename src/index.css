@@ -27,54 +27,31 @@ body {
   background: #555;
 }
 
-.listContainer {
-  display: grid;
-  grid-template-columns: 100%;
-  place-content: center;
-}
-
-.country ul {
+.sub-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  list-style: none;
+  margin-top: 3em;
+}
+
+.country-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 20em;
-  height: 4em;
-  background-color: #4e86e6;
+  height: 20em;
+  margin: 0.2em;
+  border: none;
   border-radius: 0.3em;
-  padding-right: 1em;
-  box-shadow: 2px 2px 5px #8baae0;
-  margin: 0.5em auto;
+  cursor: pointer;
 }
 
-.country a {
-  text-decoration: none;
-  color: white;
-  font-size: 1em;
-  margin-bottom: 0.5em;
-  margin-left: -1em;
-}
-
-.country p {
-  font-size: 0.7em;
-  color: yellow;
-  margin: 0;
-  text-align: right;
-}
-
-.country span {
-  margin-left: 10em;
-  color: white;
-  font-size: small;
-}
-
-.input {
-  text-align: center;
-}
-
-.sub-container {
-  margin-right: 1em;
+.country-container img {
+  width: 15em;
+  height: 10em;
 }
 
 .container {
@@ -86,102 +63,59 @@ body {
   margin: 0 0 10em;
 }
 
-.map g {
-  cursor: pointer;
-}
-
-.search {
+.search-box input {
   padding: 1em;
   font-family: "Poppins", sans-serif;
   width: 20em;
   border-radius: 0.5em;
   border: none;
+  margin-top: 5em;
 }
 
-.jvectormap-zoomin,
-.jvectormap-zoomout {
-  background-color: gainsboro;
-  color: black;
-  font-weight: 600;
-  font-size: 1.1em;
-  padding: 0.25em;
+.details-text span {
+  font-size: 0.75em;
+  font-weight: 400;
+  margin-left: 1em;
 }
 
-.detailsTop {
+.top-data {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0 1em;
+  width: 100%;
+  margin: 2em 1em;
 }
 
-.detailsTop img {
-  margin-right: 1em;
-  width: 10em;
-  height: 5em;
+.top-data img {
+  width: 20em;
 }
 
-.region {
-  text-align: center;
+.top-data h2 {
+  width: 20em;
+  font-weight: 600;
 }
 
-.detailsBottom {
-  list-style: none;
-  width: 25em;
+.top-data h2 span {
+  font-size: 0.7em;
+  font-weight: 400;
+  margin-left: 1em;
 }
 
-.detailsBottom li {
-  margin-bottom: 0.5em;
+.details-text {
+  margin-left: 1.5em;
 }
 
-#title {
-  font-size: 1.4em;
-  font-weight: 500;
-  margin-right: 0.3em;
+.details-text h3 {
+  font-size: 1.3em;
+  font-weight: 600;
 }
 
-.country-map {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 10em;
-  height: 4em;
-  background-color: #4e86e6;
-  border-radius: 0.3em;
-  box-shadow: 2px 2px 5px #8baae0;
-  margin: 0.5em auto;
-  text-align: center;
-}
-
-.country-map a {
+.details-text a {
   text-decoration: none;
-  color: white;
+  color: wheat;
 }
 
-.detailsBottom li a {
-  text-decoration: none;
-  color: white;
-}
-
-.detailsBottom li a:hover {
-  color: rgb(250, 54, 120);
-}
-
-@media only screen and (min-width: 768px) {
-  .listContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .country ul {
-    margin-right: 1em;
-  }
-
-  .detailsTop {
-    width: 70%;
-  }
+.details-text a:hover {
+  color: rgb(247, 156, 0);
 }

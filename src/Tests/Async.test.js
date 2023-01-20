@@ -7,10 +7,7 @@ describe('Get Information from API', () => {
     window.fetch.mockResolvedValueOnce({
       json: async () => [
         {
-          name: {
-            common: 'Palestine',
-            official: 'State of Palestine',
-          },
+          name: 'Palestine',
           population: 4803269,
         },
       ],
@@ -29,10 +26,7 @@ describe('Get Information from API', () => {
     window.fetch.mockResolvedValueOnce({
       json: async () => [
         {
-          name: {
-            common: 'Palestine',
-            official: 'State of Palestine',
-          },
+          name: 'Palestine',
           population: 4803269,
         },
       ],

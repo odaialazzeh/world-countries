@@ -4,7 +4,7 @@ const Async = () => {
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
-    fetch('https://restcountries.com/v3.1/name/egypt')
+    fetch('https://restcountries.com/v2/name/palestine')
       .then((response) => response.json())
       .then((data) => {
         setCountries(data);
@@ -15,7 +15,7 @@ const Async = () => {
     <div>
       <ul>
         {countries.map((country) => (
-          <li key={country.name.common}>{country.population}</li>
+          <li key={country.name}>{country.population}</li>
         ))}
       </ul>
     </div>

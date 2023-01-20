@@ -1,24 +1,17 @@
+/* eslint-disable import/no-extraneous-dependencies */
+
 import React from 'react';
 import PropTypes from 'prop-types';
+import Country from './Country';
 
-const CountriesList = ({ name, latlng }) => (
-  <div className="country">
-    <ul>
-      <li>
-        <a href={name}>{name}</a>
-      </li>
-      <li>
-        <span>latlng:</span>
-        <p>{latlng[0].toFixed(1)}</p>
-        <p>{latlng[1].toFixed(1)}</p>
-      </li>
-    </ul>
+const CountryList = ({ countries }) => (
+  <div className="sub-container">
+    { countries.map((countryData) => <Country data={countryData} key={countryData.name} />) }
   </div>
 );
 
-CountriesList.propTypes = {
-  name: PropTypes.string.isRequired,
-  latlng: PropTypes.string.isRequired,
-};
+export default CountryList;
 
-export default CountriesList;
+CountryList.propTypes = {
+  countries: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+};
