@@ -1,0 +1,49 @@
+.search {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  border-radius: 0.8rem;
+  margin: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .search {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .search {
+    width: 70%;
+  }
+}
+
+@media (min-width: 414px) {
+  .search {
+    width: 100%;
+  }
+}
+
+.search input {
+  font-family: inherit;
+  font-weight: 600;
+  width: 50%;
+  padding: 1rem 0 1rem 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 2rem rgba(43, 57, 69, 0.15);
+}
+
+.search svg {
+  position: absolute;
+  left: 2rem;
+  fill: #858585;
+}
+
+.search input::placeholder {
+  color: #858585;
+}
+
+.search input:focus {
+  outline: transparent;
+}
