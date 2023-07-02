@@ -5,8 +5,10 @@ import PropTypes from 'prop-types';
 import Country from './Country';
 
 const CountryList = ({ countries }) => (
-  <div className="sub-container">
-    { countries.map((countryData) => <Country data={countryData} key={countryData.name} />) }
+  <div className="home-container">
+    {countries.map((countryData) => (
+      <Country country={countryData} key={countryData.name.common} />
+    ))}
   </div>
 );
 

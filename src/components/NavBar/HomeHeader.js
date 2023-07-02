@@ -1,18 +1,16 @@
 import React from 'react';
+import { Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import { BsMicFill, BsGearFill } from 'react-icons/bs';
-import './Header.css';
 
 const HomeHeader = () => (
   <header>
-    <NavLink to="/" className="nav-links" />
+    <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
+      <NavLink to="/" className="nav-links" />
 
-    <h2>World Countries</h2>
+      <Navbar.Brand>World Countries</Navbar.Brand>
 
-    <div className="nav-icons">
-      <BsMicFill />
-      <BsGearFill />
-    </div>
+      <div className="nav-icons" />
+    </Navbar>
   </header>
 );
 
